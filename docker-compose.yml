@@ -16,7 +16,7 @@ services:
     command:
       RUN pip install --no-cache-dir -r requirements.txt
     command: 
-      
+      RUN ["pytest", "--cache-clear", "--html=report.html", "-v", "-n=1", "--junit-xml=result.xml"]
     command:
       tail -f /dev/null
       
