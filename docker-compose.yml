@@ -10,12 +10,6 @@ services:
     environment:
       HUB_HOST: hub
     command:
-      COPY . /Final
-    command:
-      WORKDIR /Final
-    command:
-      RUN pip install --no-cache-dir -r requirements.txt
-    command:
       tail -f /dev/null
       
   hub:
