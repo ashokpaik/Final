@@ -18,6 +18,10 @@ services:
     command: 
       RUN ["pytest", "--cache-clear", "--html=report.html", "-v", "-n=1", "--junit-xml=result.xml"]
     command:
+      cp dockercompose-chrome-1:/Final/result.xml .
+    command:
+      cp dockercompose-chrome-1:/Final/report.html .
+    command:
       tail -f /dev/null
       
   hub:
