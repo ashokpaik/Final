@@ -9,12 +9,9 @@ services:
       - "6442:5900"
     environment:
       HUB_HOST: hub
-    command:
-      tail -f /dev/null
-      
+          
   hub:
     image: ashokpaik/seleniumpytest
     ports:
       - "4444:4444"
-    command: 
-      tail -f /dev/null
+    
