@@ -16,6 +16,8 @@ services:
     command:
       RUN pip install --no-cache-dir -r requirements.txt
     command: 
+      
+    command:
       tail -f /dev/null
       
   hub:
