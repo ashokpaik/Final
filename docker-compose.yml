@@ -1,0 +1,25 @@
+version: '1'
+services:
+  
+  chrome:
+    image: ashokpaik/seleniumpytest
+    depends_on:
+      - hub
+    ports:
+      - "6442:5900"
+    environment:
+      HUB_HOST: hub
+    command:
+      RUN pip install --no-cache-dir -r requirements.txt
+    command: 
+      tail -f /dev/null
+  hub:
+    image: ashokpaik/seleniumpytest
+    ports:
+      - "4444:4444"
+    command:
+      COPY . /Final
+    command:
+      WORKDIR /Final
+    command: 
+      tail -f /dev/null
